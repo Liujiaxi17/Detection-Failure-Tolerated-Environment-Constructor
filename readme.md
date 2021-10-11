@@ -32,8 +32,7 @@ need optimizing:
 
 bugs:
 
-1. 
-This node accepts four messages without checking their time label. It may cause error.
+1. This node accepts four messages without checking their time label. It may cause error.
 In ros, when the vehicle changes the direction of its velocity quickly (usually with a low velocity), the system may give a wrong drivable area. I dont know if it results from mismatching of the time labels.
 
 2. in rsgridmap.h
