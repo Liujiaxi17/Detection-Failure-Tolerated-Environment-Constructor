@@ -2,18 +2,18 @@ This node converts point cloud data to a drivable area.
 This method considers objects detected by CNN, so the drivable area covers areas occupied by objects detected to prevent inefficient planning.
 
 Input msg:
-'''
+```
   <arg name="input_pointcloud2_topic" default="/middle/rslidar_points" />
   <arg name="input_obs_topic" default="/zzz/perception/objects_tracked" />
   <arg name="input_egopose_topic" default="/zzz/navigation/ego_pose" />
   <arg name="input_tf_topic" default="/tf" />
-'''
+```
 
 output msg:
-'''
+```
   <arg name="output_gridmap_topic" default="/zzz/perception/grid_map" />
   <arg name="output_gridmap_obs_topic" default="/zzz/perception/grid_map_obs" />
-'''
+```
 
 there are two outputs. 
 output_gridmap_topic is the raw drivable area without considering objects, which means the area occupied by these objects is considered undrivable. This msg mainly for comparation. 
