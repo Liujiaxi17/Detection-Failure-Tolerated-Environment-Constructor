@@ -31,10 +31,12 @@ need optimizing:
 4. No header in the output message
 
 bugs:
+
 1. 
 This node accepts four messages without checking their time label. It may cause error.
 In ros, when the vehicle changes the direction of its velocity quickly (usually with a low velocity), the system may give a wrong drivable area. I dont know if it results from mismatching of the time labels.
+
 2. in rsgridmap.h
-  //TODO: the preprocess function need optimizing
-  //1 point just in front of the car (seems the point reflected by the top of the car) is filtered but sometimes it failed, which causes the ego vehicle brake.
-  //2 to decrease the number of points, points with a height(z) too high or too low will be filtered but it may fail when slope
+  TODO: the preprocess function need optimizing
+  1 point just in front of the car (seems the point reflected by the top of the car) is filtered but sometimes it failed, which causes the ego vehicle brake.
+  2 to decrease the number of points, points with a height(z) too high or too low will be filtered but it may fail when slope
