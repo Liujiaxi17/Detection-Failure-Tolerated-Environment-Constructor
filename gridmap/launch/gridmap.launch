@@ -1,0 +1,21 @@
+<!-- -->
+<launch>
+  <arg name="input_pointcloud2_topic" default="/middle/rslidar_points" />
+  <arg name="input_obs_topic" default="/zzz/perception/objects_tracked" />
+  <arg name="input_egopose_topic" default="/zzz/navigation/ego_pose" />
+  <arg name="input_tf_topic" default="/tf" />
+  <arg name="output_gridmap_topic" default="/zzz/perception/grid_map" />
+  <arg name="output_gridmap_obs_topic" default="/zzz/perception/grid_map_obs" />
+
+  <node pkg="grid_map_maker" type="grid_map_maker" name="gridmap_node" output="screen">
+    <param name="input_pointcloud2_topic" value="$(arg input_pointcloud2_topic)"  />
+    <param name="input_egopose_topic" value="$(arg input_egopose_topic)"  />
+    <param name="input_tf_topic" value="$(arg input_tf_topic)"  />
+    <param name="input_obs_topic" value="$(arg input_obs_topic)" />
+    <param name="output_gridmap_topic" value="$(arg output_gridmap_topic)"  />
+    <param name="output_gridmap_obs_topic" value="$(arg output_gridmap_obs_topic)"  />
+  </node>
+
+
+
+</launch>
